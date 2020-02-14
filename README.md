@@ -11,7 +11,7 @@ The solution needs docker and docker-compose
 
 > download the bash script from my repo
 
-`sudo curl https://raw.githubusercontent.com/pbushan/selenium/master/ubuntu-docker-seleniumgrid.sh > ubuntu-docker-seleniumgrid.sh`
+`sudo curl https://raw.githubusercontent.com/pbushan/GatlingInfluxGrafanaGraphite/master/grafana-influx.sh`
 
 > run the bash script
 
@@ -25,7 +25,7 @@ The solution needs docker and docker-compose
 
 Create a separate folder and just clone this repo into the folder using 
 
-`git clone`
+`git clone https://github.com/pbushan/GatlingInfluxGrafanaGraphite.git`
 
 Run docker-compose using
 
