@@ -1,7 +1,32 @@
-# DockerGrafanaInfluxKit
-Some of us who have been working in performance testing for a long time might still remember the days when the only way to analyze your performance tests was to wait until test execution was over, test reports were created and distribution graphs were drawn. Fortunately, these days are far away from us. Now, we can run performance tests and get feedback instantly, and even choose among many available options how to monitor and analyze our performance testing scripts.
+# Docker solution for Gatling using Influx and Grafana [Graphite enabled]
 
-Lightweight docker compose to spin up Grafana and Influx for metrics collection and analyses [just run compose and you are ready to go]
+If you're a serious dev or performance engineer that leverages Gatling to run performance tests, this kit is an essential.
 
-Link to the related article: 
-https://www.blazemeter.com/blog/how-to-create-a-lightweight-performance-monitoring-solution-with-docker-grafana-and-influxdb
+Its a light-weight docker-compose solution to spin up InfluxDB with Graphite enabled and Grafana for metrics collection and analysis during your Gatling test runs.
+
+# Prerequisites
+The solution needs docker and docker-compose
+
+> Note: If you don't have docker or docker-compose, use the bash script below
+
+> download the bash script from my repo
+
+`sudo curl https://raw.githubusercontent.com/pbushan/selenium/master/ubuntu-docker-seleniumgrid.sh > ubuntu-docker-seleniumgrid.sh`
+
+> run the bash script
+
+`sh grafana-influx.sh`
+
+> reboot your server
+
+`sudo reboot`
+
+# How to deploy if docker and docker-compose are already installed
+
+Create a separate folder and just clone this repo into the folder using 
+
+`git clone`
+
+Run docker-compose using
+
+`sudo docker-compose up`

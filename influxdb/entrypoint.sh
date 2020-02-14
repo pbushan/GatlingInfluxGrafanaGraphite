@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 if [ ! -f "/var/lib/influxdb/.init" ]; then
-    exec influxd $@ &
+    exec influxd -config /etc/influxdb/influxdb.conf $@ &
 
     until wget -q "http://localhost:8086/ping" 2> /dev/null; do
         sleep 1
