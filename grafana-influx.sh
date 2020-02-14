@@ -24,8 +24,8 @@ sudo apt update
 sudo apt install git
 
 # Install Graphana
-git clone https://github.com/pbushan/GatlingInfluxGrafanaGraphite.git \
-&& mkdir DockerInfluxGrafanaGraphite \
+mkdir DockerInfluxGrafanaGraphite \
 && cd DockerInfluxGrafanaGraphite \
+&& git clone https://github.com/pbushan/GatlingInfluxGrafanaGraphite.git \
 && sudo docker-compose up -d \
 && printf '\nGrafana, Influx and Graphite installed successfully\n\n'
