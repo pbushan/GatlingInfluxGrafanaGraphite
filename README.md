@@ -50,7 +50,7 @@ The next time you run your gatling test, your influxDb should be picking up Gatl
 Whats the point of all this effort if you can't view your metrics?
 Thats why I've created a Grafana dashboard, so that you can focus on the important stuff.
 
-1) Navigate to <your-grafana-hostname>:3000
+1) Navigate to `<your-grafana-hostname>:3000`
 2) The data source should be configured for you.
 3) Click on `Grafana symbol` to your left top corner > Dashboards > Import
 4) Upload the [gatling-grafana.json](gatling-grafana.json) file from this repo
