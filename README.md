@@ -23,10 +23,36 @@ The solution needs docker and docker-compose
 
 # How to deploy if docker and docker-compose are already installed
 
-Create a separate folder and just clone this repo into the folder using 
+Just clone this repo using 
 
 `git clone https://github.com/pbushan/GatlingInfluxGrafanaGraphite.git`
+
+Navigate in the folder 
+
+`cd GatlingInfluxGrafanaGraphite`
 
 Run docker-compose using
 
 `sudo docker-compose up`
+
+# Setting up Gatling to export metrics
+
+If your gatling script doesnt have a `gatling.conf` file, create one in the test/resources folder
+![](images/GatlingConfiguration.png)
+Look at a sample config file implementation at my demo repo https://github.com/pbushan/gatlingdemo/blob/master/src/test/resources/gatling.conf
+
+Under the `graphite` section change the `host` name.
+![](images/GraphiteSettings.png)
+The next time you run your gatling test, your influxDb should be picking up Gatling metrics.
+
+# Setting up your Grafana dashboard
+
+Whats the point of all this effort if you can't view your metrics?
+Thats why I've created a Grafana dashboard, so that you can focus on the important stuff.
+
+1) Navigate to <your-grafana-hostname>:3000
+2) The data source should be configured for you.
+3) Click on `Grafana symbol` to your left top corner > Dashboards > Import
+4) Upload the [gatling-grafana.json](gatling-grafana.json) file from this repo
+5) Don't forget to save your dashboard
+![](images/GatlingGrafanaDashboard.png)
